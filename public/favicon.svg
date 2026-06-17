@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="feather" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="40%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="quill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="60%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Soft glow -->
+  <circle cx="18" cy="14" r="14" fill="url(#glow)"/>
+  <!-- Feather body -->
+  <path d="M10,4 Q18,2 24,10 Q28,16 22,24 Q18,28 14,26 Q10,22 8,16 Q6,10 10,4Z" fill="url(#feather)" opacity="0.9"/>
+  <!-- Central rachis (shaft) -->
+  <path d="M10,4 Q14,14 14,26" fill="none" stroke="url(#quill)" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Barb lines -->
+  <path d="M11,8 Q15,7 20,8" fill="none" stroke="#065f46" stroke-width="0.3" opacity="0.4"/>
+  <path d="M11,12 Q16,11 22,12" fill="none" stroke="#065f46" stroke-width="0.3" opacity="0.4"/>
+  <path d="M11,16 Q17,15 23,16" fill="none" stroke="#065f46" stroke-width="0.3" opacity="0.4"/>
+  <path d="M11,20 Q16,19 21,20" fill="none" stroke="#065f46" stroke-width="0.3" opacity="0.4"/>
+  <!-- Highlight -->
+  <path d="M12,6 Q16,5 22,10 Q24,12 24,14" fill="none" stroke="#a7f3d0" stroke-width="0.5" opacity="0.6"/>
+</svg>

@@ -15,16 +15,23 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Find Your Feathers",
   description:
-    "Discover Your Wings. A sister site to I Am One Self — The Holy Earth Foundation.",
+    "Discover Your Wings. A sacred space for healing, transformation, and the journey home to yourself.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+  },
   keywords: [
     "Find Your Feathers",
     "Discover Your Wings",
-    "spiritual awakening",
-    "Holy Earth Foundation",
+    "healing",
+    "transformation",
+    "personal growth",
+    "inner journey",
   ],
   openGraph: {
     title: "Find Your Feathers",
-    description: "Discover Your Wings. A sister site to I Am One Self.",
+    description: "Discover Your Wings. A sacred space for healing and transformation.",
     type: "website",
   },
 };

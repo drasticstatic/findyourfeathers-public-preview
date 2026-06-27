@@ -16,17 +16,21 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Next.js static export doesn't prepend basePath to icon URLs in Metadata API.
+// This workaround ensures favicons resolve correctly on GitHub Pages.
+const FYF_BASE = process.env.NODE_ENV === "production" ? "/findyourfeathers-public-preview" : "";
+
 export const metadata: Metadata = {
   title: "Find Your Feathers",
   description:
     "Discover Your Wings. A sacred space for healing, transformation, and the journey home to yourself.",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon-32.png", type: "image/png", sizes: "32x32" },
+      { url: `${FYF_BASE}/favicon.ico`, sizes: "any" },
+      { url: `${FYF_BASE}/favicon.svg`, type: "image/svg+xml" },
+      { url: `${FYF_BASE}/favicon-32.png`, type: "image/png", sizes: "32x32" },
     ],
-    apple: "/apple-touch-icon.png",
+    apple: `${FYF_BASE}/apple-touch-icon.png`,
   },
   keywords: [
     "Find Your Feathers",

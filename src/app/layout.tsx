@@ -22,8 +22,11 @@ export const metadata: Metadata = {
     "Discover Your Wings. A sacred space for healing, transformation, and the journey home to yourself.",
   icons: {
     icon: [
+      { url: "/favicon.ico", sizes: "any" },
       { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32.png", type: "image/png", sizes: "32x32" },
     ],
+    apple: "/apple-touch-icon.png",
   },
   keywords: [
     "Find Your Feathers",

@@ -1,13 +1,32 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 /**
- * PageScrollProgress — thin gold bar at top of page that fills
- * as the user scrolls. Sits below the navbar + disclaimer badge.
+ * PageScrollProgress — thin gold bar that fills as the user scrolls.
+ * Dynamically measures the disclaimer badge height so it always sits
+ * just below the badge on every screen size, never cutting through it.
  */
 export default function PageScrollProgress() {
   const [progress, setProgress] = useState(0);
+  const [top, setTop] = useState(92); // fallback: desktop badge height
+
+  const measureBadge = useCallback(() => {
+    const badge = document.querySelector("[data-disclaimer-badge]");
+    if (badge) {
+      const rect = badge.getBoundingClientRect();
+      // Badge is position:fixed, so its top is already relative to viewport.
+      // top = navbar(64px) + badge rendered height
+      setTop(rect.bottom);
+    }
+  }, []);
+
+  useEffect(() => {
+    measureBadge();
+    // Re-measure on resize (text wraps, badge height changes)
+    window.addEventListener("resize", measureBadge);
+    return () => window.removeEventListener("resize", measureBadge);
+  }, [measureBadge]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -21,7 +40,10 @@ export default function PageScrollProgress() {
   }, []);
 
   return (
-    <div className="fixed top-[92px] inset-x-0 z-30 h-0.5 bg-neutral-100 dark:bg-neutral-900">
+    <div
+      className="fixed inset-x-0 z-30 h-0.5 bg-neutral-100 dark:bg-neutral-900"
+      style={{ top: `${top}px` }}
+    >
       <div
         className="h-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 transition-[width] duration-150 ease-out"
         style={{ width: `${progress * 100}%` }}

@@ -80,8 +80,9 @@ export default function Navbar() {
             onClick={handleHomeClick}
             className="inline-flex items-center gap-2 text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-50 hover:text-amber-600 dark:hover:text-amber-400 transition-colors group min-h-[44px] min-w-[44px]"
           >
-            <Feather className="h-5 w-5 text-amber-600 dark:text-amber-400 group-hover:scale-110 transition-transform" />
+            <img src="/favicon.svg" alt="" className="h-6 w-6 group-hover:scale-110 transition-transform" />
             <span className="drop-shadow-sm">Find Your Feathers</span>
+            <Home className="h-4 w-4 text-amber-600 dark:text-amber-400 group-hover:scale-110 transition-transform" />
           </Link>
 
           <div className="hidden md:flex items-center gap-2 flex-1 justify-end">

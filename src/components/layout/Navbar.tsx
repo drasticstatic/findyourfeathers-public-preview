@@ -78,11 +78,11 @@ export default function Navbar() {
           <Link
             href="/"
             onClick={handleHomeClick}
-            className="inline-flex items-center gap-2 text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-50 hover:text-amber-600 dark:hover:text-amber-400 transition-colors group min-h-[44px] min-w-[44px]"
+            className="inline-flex items-center gap-2 text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-50 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors group min-h-[44px] min-w-[44px]"
           >
             <img src="/favicon.svg" alt="" className="h-6 w-6 group-hover:scale-110 transition-transform" />
             <span className="drop-shadow-sm">Find Your Feathers</span>
-            <Home className="h-4 w-4 text-amber-600 dark:text-amber-400 group-hover:scale-110 transition-transform" />
+            <Home className="h-4 w-4 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform" />
           </Link>
 
           <div className="hidden md:flex items-center gap-2 flex-1 justify-end">
@@ -93,7 +93,7 @@ export default function Navbar() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm text-neutral-600 dark:text-neutral-400 hover:text-amber-600 dark:hover:text-amber-400 transition-all rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-800/50 shadow-sm hover:shadow-md hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm text-neutral-600 dark:text-neutral-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-800/50 shadow-sm hover:shadow-md hover:-translate-y-0.5"
                 >
                   <link.icon className="h-3.5 w-3.5" />
                   {link.label}
@@ -105,8 +105,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-md transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 ${
                     pathname === link.href
-                      ? "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/30"
-                      : "text-neutral-600 dark:text-neutral-400 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-neutral-100 dark:hover:bg-neutral-800/50"
+                      ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30"
+                      : "text-neutral-600 dark:text-neutral-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-neutral-100 dark:hover:bg-neutral-800/50"
                   }`}
                 >
                   <link.icon className="h-3.5 w-3.5" />
@@ -123,8 +123,8 @@ export default function Navbar() {
                 onClick={() => setSiteMenuOpen(!siteMenuOpen)}
                 className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-md transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 ${
                   siteMenuOpen
-                    ? "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/30"
-                    : "text-neutral-600 dark:text-neutral-400 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-neutral-100 dark:hover:bg-neutral-800/50"
+                    ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30"
+                    : "text-neutral-600 dark:text-neutral-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-neutral-100 dark:hover:bg-neutral-800/50"
                 }`}
               >
                 <Globe className="h-3.5 w-3.5" />
@@ -143,11 +143,11 @@ export default function Navbar() {
                       onClick={() => setSiteMenuOpen(false)}
                       className={`flex items-center gap-2 px-4 py-2.5 text-sm transition-colors ${
                         pathname === link.href
-                          ? "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/30"
-                          : "text-neutral-700 dark:text-neutral-300 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+                          ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30"
+                          : "text-neutral-700 dark:text-neutral-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
                       }`}
                     >
-                      <link.icon className="h-4 w-4 text-amber-500" />
+                      <link.icon className="h-4 w-4 text-emerald-500" />
                       {link.label}
                     </Link>
                   ))}
@@ -170,7 +170,7 @@ export default function Navbar() {
           {/* Hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden p-2 -mr-2 text-neutral-700 dark:text-neutral-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors shadow-sm hover:shadow-md rounded-md"
+            className="md:hidden p-2 -mr-2 text-neutral-700 dark:text-neutral-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors shadow-sm hover:shadow-md rounded-md"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
             {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -216,11 +216,11 @@ export default function Navbar() {
                 }}
                 className={`flex items-center gap-2 px-4 py-3 text-sm rounded-lg transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 ${
                   pathname === "/"
-                    ? "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/30 font-medium"
-                    : "text-neutral-700 dark:text-neutral-300 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+                    ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 font-medium"
+                    : "text-neutral-700 dark:text-neutral-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
                 }`}
               >
-                <Home className="h-4 w-4 text-amber-500" />
+                <Home className="h-4 w-4 text-emerald-500" />
                 Home
               </Link>
 
@@ -231,11 +231,11 @@ export default function Navbar() {
                   onClick={() => setMenuOpen(false)}
                   className={`flex items-center gap-2 px-4 py-3 text-sm rounded-lg transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 ${
                     pathname === link.href
-                      ? "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/30 font-medium"
-                      : "text-neutral-700 dark:text-neutral-300 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+                      ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 font-medium"
+                      : "text-neutral-700 dark:text-neutral-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
                   }`}
                 >
-                  <link.icon className="h-4 w-4 text-amber-500" />
+                  <link.icon className="h-4 w-4 text-emerald-500" />
                   {link.label}
                 </Link>
               ))}
@@ -253,11 +253,11 @@ export default function Navbar() {
                   onClick={() => setMenuOpen(false)}
                   className={`flex items-center gap-2 px-4 py-3 text-sm rounded-lg transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 ${
                     pathname === link.href
-                      ? "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/30 font-medium"
-                      : "text-neutral-700 dark:text-neutral-300 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+                      ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 font-medium"
+                      : "text-neutral-700 dark:text-neutral-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
                   }`}
                 >
-                  <link.icon className="h-4 w-4 text-amber-500" />
+                  <link.icon className="h-4 w-4 text-emerald-500" />
                   {link.label}
                 </Link>
               ))}

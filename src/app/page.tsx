@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { ChevronDown, MapPinSearch } from "lucide-react";
 
 function useMountCheck() {
   const [mounted, setMounted] = useState(false);
@@ -18,7 +19,7 @@ export default function Home() {
   const siteBasePath = isDev ? "" : "/findyourfeathers-public-preview";
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black relative overflow-hidden">
+    <div className="flex flex-col flex-1 items-center justify-center min-h-screen bg-zinc-50 font-sans dark:bg-black relative overflow-hidden">
       {/* Favicon watermark */}
       <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0" aria-hidden>
         <motion.img
@@ -30,28 +31,46 @@ export default function Home() {
         />
       </div>
 
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start relative z-10">
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <img
+      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-center py-20 px-6 text-center relative z-10">
+        <div className="flex flex-col items-center gap-6">
+          <motion.img
             src={`${siteBasePath}/favicon.svg`}
             alt=""
-            className="mx-auto h-16 w-16 mb-4 opacity-50 pointer-events-none select-none"
+            className="mx-auto h-20 w-20 mb-2 opacity-60 pointer-events-none select-none"
+            animate={{ scale: [1, 1.03, 1] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             aria-hidden
           />
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
+          <h1 className="text-4xl font-bold tracking-tight text-black dark:text-zinc-50">
             Find Your Feathers
           </h1>
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             Discover Your Wings. A sacred space for healing, transformation,
             and the journey home to yourself.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+
+          {/* Scroll indicator */}
+          <div className="flex flex-col items-center gap-2 mt-4">
+            <p className="text-sm text-neutral-500 dark:text-neutral-400">
+              This site is under construction.
+            </p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400">
+              Explore the map below
+            </p>
+            <motion.div
+              animate={{ y: [0, 6, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <ChevronDown className="h-6 w-6 text-emerald-500 dark:text-emerald-400" />
+            </motion.div>
+          </div>
+
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-emerald-600 dark:bg-emerald-500 px-5 text-white transition-colors hover:bg-emerald-700 dark:hover:bg-emerald-400 md:w-[158px]"
-            href="#explore"
+            href="/404"
+            className="inline-flex items-center gap-2 rounded-full bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 px-5 py-2.5 text-sm font-medium text-emerald-700 dark:text-emerald-300 transition-all shadow-sm hover:shadow-md hover:bg-emerald-100 dark:hover:bg-emerald-950/50 hover:-translate-y-0.5 mt-4"
           >
-            Begin Your Journey
+            <MapPinSearch className="h-4 w-4" />
+            Explore the 404
           </a>
         </div>
       </main>

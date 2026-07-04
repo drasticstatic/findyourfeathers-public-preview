@@ -16,19 +16,30 @@ import {
   ChevronDown,
   Globe,
   Sparkles,
+  MapPinSearch,
+  Bird,
+  Mail,
 } from "lucide-react";
 
-// Internal nav links for FYF
+// Internal nav links for FYF (shown in top bar on desktop)
 const navLinks = [
   { href: "/faq", label: "FAQ", icon: BookOpen, external: false },
 ];
 
+// Direct nav links — visible after dropdown, not inside it
+const directLinks = [
+  { href: "/404", label: "Lost?", icon: MapPinSearch, external: false },
+];
+
 // Dropdown items for FYF pages that don't fit in the top bar
 const siteLinks = [
-  { href: "/about", label: "About", icon: Feather, external: false },
-  { href: "/services", label: "Services", icon: Heart, external: false },
+  { href: "/about", label: "About", icon: Bird, external: false },
+  { href: "https://www.findyourfeathers.org/contact", label: "Contact", icon: Mail, external: true },
+  { href: "https://www.findyourfeathers.org", label: "findyourfeathers.org", icon: Globe, external: true },
   { href: "/404", label: "Explore 404", icon: Sparkles, external: false },
 ];
+
+const siteBasePath = process.env.NODE_ENV === "production" ? "/findyourfeathers-public-preview" : "";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -80,7 +91,7 @@ export default function Navbar() {
             onClick={handleHomeClick}
             className="inline-flex items-center gap-2 text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-50 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors group min-h-[44px] min-w-[44px]"
           >
-            <img src="/favicon.svg" alt="" className="h-6 w-6 group-hover:scale-110 transition-transform" />
+            <img src={`${siteBasePath}/favicon.svg`} alt="" className="h-6 w-6 group-hover:scale-110 transition-transform" />
             <span className="drop-shadow-sm">Find Your Feathers</span>
             <Home className="h-4 w-4 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform" />
           </Link>
@@ -155,6 +166,22 @@ export default function Navbar() {
               )}
             </div>
 
+            {/* Direct links (after dropdown) */}
+            {directLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-md transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 ${
+                  pathname === link.href
+                    ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30"
+                    : "text-neutral-600 dark:text-neutral-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-neutral-100 dark:hover:bg-neutral-800/50"
+                }`}
+              >
+                <link.icon className="h-3.5 w-3.5" />
+                {link.label}
+              </Link>
+            ))}
+
             {/* GitHub */}
             <a
               href="https://github.com/drasticstatic/findyourfeathers-public-preview"
@@ -225,6 +252,22 @@ export default function Navbar() {
               </Link>
 
               {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className={`flex items-center gap-2 px-4 py-3 text-sm rounded-lg transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 ${
+                    pathname === link.href
+                      ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 font-medium"
+                      : "text-neutral-700 dark:text-neutral-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+                  }`}
+                >
+                  <link.icon className="h-4 w-4 text-emerald-500" />
+                  {link.label}
+                </Link>
+              ))}
+
+              {directLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}

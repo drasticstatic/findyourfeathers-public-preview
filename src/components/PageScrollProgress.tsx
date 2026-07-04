@@ -45,7 +45,7 @@ export default function PageScrollProgress() {
       style={{ top: `${top}px` }}
     >
       <div
-        className="h-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500"
+        className="h-full bg-gradient-to-r from-emerald-500 via-emerald-400 to-emerald-500"
         style={{ width: `${progress * 100}%`, willChange: "width" }}
       />
     </div>

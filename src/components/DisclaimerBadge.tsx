@@ -63,17 +63,17 @@ export default function DisclaimerBadge() {
   return (
     <>
       {/* ── Persistent banner — fixed below navbar ── */}
-      <div data-disclaimer-badge className="fixed top-16 inset-x-0 z-40 bg-amber-50 dark:bg-amber-950/30 border-b border-amber-200 dark:border-amber-900">
+      <div data-disclaimer-badge className="fixed top-16 inset-x-0 z-40 bg-emerald-50 dark:bg-emerald-950/30 border-b border-emerald-200 dark:border-emerald-900">
         <button
           onClick={() => setOpen(true)}
-          className="w-full px-4 py-1.5 flex items-center justify-center gap-2 text-xs font-medium text-amber-700 dark:text-amber-400 hover:bg-amber-100 dark:hover:bg-amber-950/50 transition-colors"
+          className="w-full px-4 py-1.5 flex items-center justify-center gap-2 text-xs font-medium text-emerald-700 dark:text-emerald-400 hover:bg-emerald-100 dark:hover:bg-emerald-950/50 transition-colors"
         >
           <Info className="h-3 w-3 flex-shrink-0" />
           <span>
             Concept prototype & educational resource — not the official
             findyourfeathers.com · Not licensed health professionals · Compliant with GitHub Pages ToS
           </span>
-          <span className="text-[10px] text-amber-500 dark:text-amber-500 underline underline-offset-2 ml-1">
+          <span className="text-[10px] text-emerald-500 dark:text-emerald-500 underline underline-offset-2 ml-1">
             full disclosure
           </span>
         </button>
@@ -107,7 +107,7 @@ export default function DisclaimerBadge() {
               {/* Header — fixed */}
               <div className="flex flex-col items-center p-6 sm:p-8 pb-3 flex-shrink-0">
                 <div className="flex items-center gap-2">
-                  <Info className="h-5 w-5 text-amber-500" />
+                  <Info className="h-5 w-5 text-emerald-500" />
                   <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-50 text-center">
                     About This Site
                   </h3>
@@ -134,7 +134,7 @@ export default function DisclaimerBadge() {
                 <div className="space-y-5 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                   {/* Status Disclosure */}
                   <div>
-                    <p className="text-xs uppercase tracking-wider font-semibold text-amber-600 dark:text-amber-400 mb-2">
+                    <p className="text-xs uppercase tracking-wider font-semibold text-emerald-600 dark:text-emerald-400 mb-2">
                       Status Disclosure
                     </p>
                     <p>
@@ -169,7 +169,7 @@ export default function DisclaimerBadge() {
 
                   {/* Exploratory Intent */}
                   <div>
-                    <p className="text-xs uppercase tracking-wider font-semibold text-amber-600 dark:text-amber-400 mb-2">
+                    <p className="text-xs uppercase tracking-wider font-semibold text-emerald-600 dark:text-emerald-400 mb-2">
                       Exploratory Intent
                     </p>
                     <p>
@@ -200,7 +200,7 @@ export default function DisclaimerBadge() {
 
                   {/* Development & Stewardship */}
                   <div>
-                    <p className="text-xs uppercase tracking-wider font-semibold text-amber-600 dark:text-amber-400 mb-2">
+                    <p className="text-xs uppercase tracking-wider font-semibold text-emerald-600 dark:text-emerald-400 mb-2">
                       Development & Stewardship
                     </p>
                     <p>
@@ -224,7 +224,7 @@ export default function DisclaimerBadge() {
 
                   {/* Transparency */}
                   <div>
-                    <p className="text-xs uppercase tracking-wider font-semibold text-amber-600 dark:text-amber-400 mb-2">
+                    <p className="text-xs uppercase tracking-wider font-semibold text-emerald-600 dark:text-emerald-400 mb-2">
                       Transparency
                     </p>
                     <ul className="space-y-1.5 ml-4 list-disc text-neutral-500 dark:text-neutral-500">
@@ -234,7 +234,7 @@ export default function DisclaimerBadge() {
                           href="https://github.com/drasticstatic/findyourfeathers-public-preview"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-amber-600 dark:text-amber-400 underline underline-offset-2 hover:text-amber-700 dark:hover:text-amber-300 transition-colors"
+                          className="text-emerald-600 dark:text-emerald-400 underline underline-offset-2 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors"
                         >
                           GitHub
                         </a>
@@ -288,7 +288,7 @@ export default function DisclaimerBadge() {
 
                 <button
                   onClick={() => setOpen(false)}
-                  className="inline-flex items-center justify-center gap-1.5 rounded-full bg-amber-600 px-5 py-2 text-sm font-medium text-white shadow-lg shadow-amber-600/25 transition-all hover:bg-amber-700 hover:-translate-y-0.5 dark:bg-amber-500 dark:shadow-amber-500/20 dark:hover:bg-amber-400"
+                  className="inline-flex items-center justify-center gap-1.5 rounded-full bg-emerald-600 px-5 py-2 text-sm font-medium text-white shadow-lg shadow-emerald-600/25 transition-all hover:bg-emerald-700 hover:-translate-y-0.5 dark:bg-emerald-500 dark:shadow-emerald-500/20 dark:hover:bg-emerald-400"
                 >
                   I understand
                 </button>

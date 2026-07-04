@@ -4,6 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ExternalLink, Code, Mail, Sparkles, Home, Feather } from "lucide-react";
 
+function Interpunct() {
+  return <span className="text-neutral-300 dark:text-neutral-700">·</span>;
+}
+
 export default function Footer() {
   const pathname = usePathname();
 
@@ -39,9 +43,9 @@ export default function Footer() {
 
           <Link
             href="/404"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 px-6 py-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 transition-all shadow-sm hover:shadow-md hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:border-neutral-300 dark:hover:border-neutral-600 hover:-translate-y-0.5"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 px-6 py-3 text-sm font-medium text-emerald-700 dark:text-emerald-300 transition-all shadow-sm hover:shadow-md hover:bg-emerald-100 dark:hover:bg-emerald-950/50 hover:-translate-y-0.5"
           >
-            <Sparkles className="h-4 w-4 text-amber-500 dark:text-amber-400" />
+            <Sparkles className="h-4 w-4 text-emerald-500 dark:text-emerald-400" />
             Explore the 404
           </Link>
         </div>
@@ -50,17 +54,29 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-neutral-100 dark:border-neutral-800 px-6 py-8">
         <div className="mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400 dark:text-neutral-600">
-          <p>&copy; {new Date().getFullYear()} Find Your Feathers</p>
+          <p className="inline-flex items-center gap-1">
+            &copy; {new Date().getFullYear()} <Feather className="h-3 w-3 text-emerald-500" /> Find Your Feathers
+          </p>
 
           <div className="flex items-center gap-4">
             <Link
               href="/"
               onClick={handleHomeClick}
-              className="inline-flex items-center gap-1 transition-all hover:text-amber-600 dark:hover:text-amber-400 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-1 transition-all hover:text-emerald-600 dark:hover:text-emerald-400 hover:-translate-y-0.5"
             >
               <Home className="h-3 w-3" />
-              Home
+              Home|Dev Portal
             </Link>
+            <Interpunct />
+            <a
+              href="https://www.findyourfeathers.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 transition-all hover:text-emerald-600 dark:hover:text-emerald-400 hover:-translate-y-0.5"
+            >
+              <Home className="h-3 w-3" />
+              Home|Wix
+            </a>
           </div>
 
           <a

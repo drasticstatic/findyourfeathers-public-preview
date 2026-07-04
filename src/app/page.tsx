@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ChevronDown, MapPinSearch } from "lucide-react";
+import { ChevronDown, MapPinSearch, Construction } from "lucide-react";
 
 function useMountCheck() {
   const [mounted, setMounted] = useState(false);
@@ -51,7 +51,8 @@ export default function Home() {
 
           {/* Scroll indicator */}
           <div className="flex flex-col items-center gap-2 mt-4">
-            <p className="text-sm text-neutral-500 dark:text-neutral-400">
+            <p className="inline-flex items-center gap-1.5 text-sm text-neutral-500 dark:text-neutral-400">
+              <Construction className="h-4 w-4 text-emerald-500" />
               This site is under construction.
             </p>
             <p className="text-sm text-neutral-500 dark:text-neutral-400">
@@ -65,13 +66,6 @@ export default function Home() {
             </motion.div>
           </div>
 
-          <a
-            href="/404"
-            className="inline-flex items-center gap-2 rounded-full bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 px-5 py-2.5 text-sm font-medium text-emerald-700 dark:text-emerald-300 transition-all shadow-sm hover:shadow-md hover:bg-emerald-100 dark:hover:bg-emerald-950/50 hover:-translate-y-0.5 mt-4"
-          >
-            <MapPinSearch className="h-4 w-4" />
-            Explore the 404
-          </a>
         </div>
       </main>
     </div>

@@ -36,7 +36,6 @@ const siteLinks = [
   { href: "/about", label: "About", icon: Bird, external: false },
   { href: "https://www.findyourfeathers.org/contact", label: "Contact", icon: Mail, external: true },
   { href: "https://www.findyourfeathers.org", label: "findyourfeathers.org", icon: Globe, external: true },
-  { href: "/404", label: "Explore 404", icon: Sparkles, external: false },
 ];
 
 const siteBasePath = process.env.NODE_ENV === "production" ? "/findyourfeathers-public-preview" : "";
@@ -126,6 +125,22 @@ export default function Navbar() {
               )
             )}
 
+            {/* Direct links (after FAQ) */}
+            {directLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-md transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 ${
+                  pathname === link.href
+                    ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30"
+                    : "text-neutral-600 dark:text-neutral-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-neutral-100 dark:hover:bg-neutral-800/50"
+                }`}
+              >
+                <link.icon className="h-3.5 w-3.5" />
+                {link.label}
+              </Link>
+            ))}
+
             <span className="w-px h-5 bg-neutral-200 dark:bg-neutral-800 mx-2" />
 
             {/* FYF pages dropdown */}
@@ -147,40 +162,43 @@ export default function Navbar() {
 
               {siteMenuOpen && (
                 <div className="absolute right-0 top-full mt-1 w-56 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-xl py-1 z-50">
-                  {siteLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={() => setSiteMenuOpen(false)}
-                      className={`flex items-center gap-2 px-4 py-2.5 text-sm transition-colors ${
-                        pathname === link.href
-                          ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30"
-                          : "text-neutral-700 dark:text-neutral-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
-                      }`}
-                    >
-                      <link.icon className="h-4 w-4 text-emerald-500" />
-                      {link.label}
-                    </Link>
-                  ))}
+                  {siteLinks.map((link) =>
+                    link.external ? (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setSiteMenuOpen(false)}
+                        className={`flex items-center gap-2 px-4 py-2.5 text-sm transition-colors ${
+                          pathname === link.href
+                            ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30"
+                            : "text-neutral-700 dark:text-neutral-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+                        }`}
+                      >
+                        <link.icon className="h-4 w-4 text-emerald-500" />
+                        {link.label}
+                        <ExternalLink className="h-3 w-3 text-neutral-400 ml-auto" />
+                      </a>
+                    ) : (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setSiteMenuOpen(false)}
+                        className={`flex items-center gap-2 px-4 py-2.5 text-sm transition-colors ${
+                          pathname === link.href
+                            ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30"
+                            : "text-neutral-700 dark:text-neutral-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+                        }`}
+                      >
+                        <link.icon className="h-4 w-4 text-emerald-500" />
+                        {link.label}
+                      </Link>
+                    )
+                  )}
                 </div>
               )}
             </div>
-
-            {/* Direct links (after dropdown) */}
-            {directLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-md transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 ${
-                  pathname === link.href
-                    ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30"
-                    : "text-neutral-600 dark:text-neutral-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-neutral-100 dark:hover:bg-neutral-800/50"
-                }`}
-              >
-                <link.icon className="h-3.5 w-3.5" />
-                {link.label}
-              </Link>
-            ))}
 
             {/* GitHub */}
             <a
@@ -289,21 +307,40 @@ export default function Navbar() {
                 Explore
               </p>
 
-              {siteLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className={`flex items-center gap-2 px-4 py-3 text-sm rounded-lg transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 ${
-                    pathname === link.href
-                      ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 font-medium"
-                      : "text-neutral-700 dark:text-neutral-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
-                  }`}
-                >
-                  <link.icon className="h-4 w-4 text-emerald-500" />
-                  {link.label}
-                </Link>
-              ))}
+              {siteLinks.map((link) =>
+                link.external ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMenuOpen(false)}
+                    className={`flex items-center gap-2 px-4 py-3 text-sm rounded-lg transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 ${
+                      pathname === link.href
+                        ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 font-medium"
+                        : "text-neutral-700 dark:text-neutral-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+                    }`}
+                  >
+                    <link.icon className="h-4 w-4 text-emerald-500" />
+                    {link.label}
+                    <ExternalLink className="h-3 w-3 text-neutral-400 ml-auto" />
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMenuOpen(false)}
+                    className={`flex items-center gap-2 px-4 py-3 text-sm rounded-lg transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 ${
+                      pathname === link.href
+                        ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 font-medium"
+                        : "text-neutral-700 dark:text-neutral-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+                    }`}
+                  >
+                    <link.icon className="h-4 w-4 text-emerald-500" />
+                    {link.label}
+                  </Link>
+                )
+              )}
 
               <div className="my-3 h-px bg-neutral-200 dark:bg-neutral-800" />
 

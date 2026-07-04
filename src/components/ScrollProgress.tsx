@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 /**
- * ScrollProgress — circular gold ring in bottom-right corner
+ * ScrollProgress — circular emerald ring in bottom-right corner
  * that fills based on page scroll position. Shows percentage
  * on hover. Click to scroll to top.
  */
@@ -65,7 +65,7 @@ export default function ScrollProgress() {
           cy="24"
           r={radius}
           fill="none"
-          stroke="url(#gold-gradient)"
+          stroke="url(#emerald-gradient)"
           strokeWidth="2.5"
           strokeLinecap="round"
           strokeDasharray={circumference}
@@ -73,15 +73,15 @@ export default function ScrollProgress() {
           style={{ willChange: "stroke-dashoffset" }}
         />
         <defs>
-          <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#d97706" />
-            <stop offset="50%" stopColor="#f59e0b" />
-            <stop offset="100%" stopColor="#d97706" />
+          <linearGradient id="emerald-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#059669" />
+            <stop offset="50%" stopColor="#10b981" />
+            <stop offset="100%" stopColor="#059669" />
           </linearGradient>
         </defs>
       </svg>
       {/* Center arrow */}
-      <span className="absolute inset-0 flex items-center justify-center text-amber-600 dark:text-amber-400 group-hover:text-amber-700 dark:group-hover:text-amber-300 transition-colors">
+      <span className="absolute inset-0 flex items-center justify-center text-emerald-600 dark:text-emerald-400 group-hover:text-emerald-700 dark:group-hover:text-emerald-300 transition-colors">
         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
         </svg>

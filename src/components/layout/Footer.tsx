@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ExternalLink, Code, Mail, Sparkles, Home, Feather } from "lucide-react";
+import { ExternalLink, Code, Mail, MapPinSearch, Home, Feather } from "lucide-react";
 
 function Interpunct() {
   return <span className="text-neutral-300 dark:text-neutral-700">·</span>;
@@ -45,7 +45,7 @@ export default function Footer() {
             href="/404"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 px-6 py-3 text-sm font-medium text-emerald-700 dark:text-emerald-300 transition-all shadow-sm hover:shadow-md hover:bg-emerald-100 dark:hover:bg-emerald-950/50 hover:-translate-y-0.5"
           >
-            <Sparkles className="h-4 w-4 text-emerald-500 dark:text-emerald-400" />
+            <MapPinSearch className="h-4 w-4 text-emerald-500 dark:text-emerald-400" />
             Explore the 404
           </Link>
         </div>
@@ -76,6 +76,7 @@ export default function Footer() {
             >
               <Home className="h-3 w-3" />
               Home|Wix
+              <ExternalLink className="h-3 w-3" />
             </a>
           </div>
 

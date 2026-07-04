@@ -51,8 +51,10 @@ export default function Home() {
 
           {/* Scroll indicator */}
           <div className="flex flex-col items-center gap-2 mt-4">
-            <p className="inline-flex items-center gap-1.5 text-sm text-neutral-500 dark:text-neutral-400">
-              <Construction className="h-4 w-4 text-emerald-500" />
+            <div className="flex flex-col items-center mb-1">
+              <Construction className="h-8 w-8 text-emerald-500" />
+            </div>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400">
               This site is under construction.
             </p>
             <p className="text-sm text-neutral-500 dark:text-neutral-400">

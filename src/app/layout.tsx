@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import DisclaimerBadge from "@/components/DisclaimerBadge";
 import PageScrollProgress from "@/components/PageScrollProgress";
+import ScrollProgress from "@/components/ScrollProgress";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -61,6 +62,7 @@ export default function RootLayout({
         <Navbar />
         <DisclaimerBadge />
         <PageScrollProgress />
+        <ScrollProgress />
         <main className="flex-1 pt-[92px]">{children}</main>
         <Footer />
       </body>

@@ -71,7 +71,7 @@ export default function DisclaimerBadge() {
           <Info className="h-3 w-3 flex-shrink-0" />
           <span>
             Concept prototype & educational resource — not the official
-            findyourfeathers.com · Not licensed health professionals · Compliant with GitHub Pages ToS
+            findyourfeathers.org · Not licensed health professionals · Compliant with GitHub Pages ToS
           </span>
           <span className="text-[10px] text-emerald-500 dark:text-emerald-500 underline underline-offset-2 ml-1">
             full disclosure

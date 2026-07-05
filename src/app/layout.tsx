@@ -58,7 +58,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100">
+      <body className="min-h-full flex flex-col bg-[#f2f2f2] text-[#262626] dark:bg-[#1f1f1f] dark:text-[#d4d4d4]">
         <Navbar />
         <DisclaimerBadge />
         <PageScrollProgress />

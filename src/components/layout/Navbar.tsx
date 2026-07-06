@@ -11,15 +11,12 @@ import {
   Home,
   Feather,
   BookOpen,
-  Heart,
-  Mountain,
   ChevronDown,
   Globe,
-  Sparkles,
-  MapPinSearch,
   Bird,
   Mail,
 } from "lucide-react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 // Internal nav links for FYF (shown in top bar on desktop)
 const navLinks = [
@@ -27,9 +24,7 @@ const navLinks = [
 ];
 
 // Direct nav links — visible after dropdown, not inside it
-const directLinks = [
-  { href: "/404", label: "Lost?", icon: MapPinSearch, external: false },
-];
+const directLinks: typeof navLinks = [];
 
 // Dropdown items for FYF pages that don't fit in the top bar
 const siteLinks = [
@@ -200,6 +195,9 @@ export default function Navbar() {
               )}
             </div>
 
+            {/* Theme Toggle */}
+            <ThemeToggle />
+
             {/* GitHub */}
             <a
               href="https://github.com/drasticstatic/findyourfeathers-public-preview"
@@ -341,6 +339,14 @@ export default function Navbar() {
                   </Link>
                 )
               )}
+
+              <div className="my-3 h-px bg-neutral-200 dark:bg-neutral-800" />
+
+              {/* Mobile theme toggle */}
+              <div className="flex items-center justify-between px-4 py-2">
+                <span className="text-sm text-neutral-500 dark:text-neutral-400">Appearance</span>
+                <ThemeToggle />
+              </div>
 
               <div className="my-3 h-px bg-neutral-200 dark:bg-neutral-800" />
 

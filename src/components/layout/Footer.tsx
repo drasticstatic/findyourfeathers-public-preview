@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ExternalLink, Code, Mail, MapPinSearch, Home, Feather } from "lucide-react";
+import { ExternalLink, Code, Mail, Globe, Feather, Home } from "lucide-react";
 
 function Interpunct() {
   return <span className="text-neutral-300 dark:text-neutral-700">·</span>;
@@ -40,14 +40,6 @@ export default function Footer() {
             Contact
             <ExternalLink className="h-3.5 w-3.5" />
           </a>
-
-          <Link
-            href="/404"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 px-6 py-3 text-sm font-medium text-emerald-700 dark:text-emerald-300 transition-all shadow-sm hover:shadow-md hover:bg-emerald-100 dark:hover:bg-emerald-950/50 hover:-translate-y-0.5"
-          >
-            <MapPinSearch className="h-4 w-4 text-emerald-500 dark:text-emerald-400" />
-            Explore the 404
-          </Link>
         </div>
       </section>
 
@@ -65,7 +57,7 @@ export default function Footer() {
               className="inline-flex items-center gap-1 transition-all hover:text-emerald-600 dark:hover:text-emerald-400 hover:-translate-y-0.5"
             >
               <Home className="h-3 w-3" />
-              Home|Dev Portal
+              Dev Portal
             </Link>
             <Interpunct />
             <a
@@ -74,8 +66,8 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 transition-all hover:text-emerald-600 dark:hover:text-emerald-400 hover:-translate-y-0.5"
             >
-              <Home className="h-3 w-3" />
-              Home|Wix
+              <Globe className="h-3 w-3" />
+              Wix Site
               <ExternalLink className="h-3 w-3" />
             </a>
           </div>

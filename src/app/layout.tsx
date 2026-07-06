@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import DisclaimerBadge from "@/components/DisclaimerBadge";
 import PageScrollProgress from "@/components/PageScrollProgress";
 import ScrollProgress from "@/components/ScrollProgress";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -56,15 +57,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
-      <body className="min-h-full flex flex-col bg-[#f2f2f2] text-[#262626] dark:bg-[#1f1f1f] dark:text-[#d4d4d4]">
-        <Navbar />
-        <DisclaimerBadge />
-        <PageScrollProgress />
-        <ScrollProgress />
-        <main className="flex-1 pt-[92px]">{children}</main>
-        <Footer />
+      <body className="min-h-full flex flex-col">
+        <ThemeProvider>
+          <Navbar />
+          <DisclaimerBadge />
+          <PageScrollProgress />
+          <ScrollProgress />
+          <main className="flex-1 pt-[92px]">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

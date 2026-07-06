@@ -7,16 +7,16 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* Default to dark grey */
-html {
-  --background: #1a1a1a;
-  --foreground: #d4d4d4;
+/* Dark green mode (default with .dark class) */
+html.dark {
+  --background: #0a180a;
+  --foreground: #d4e8d4;
 }
 
-/* Light grey when .dark is NOT on html */
+/* Light green mode */
 html:not(.dark) {
-  --background: #f2f2f2;
-  --foreground: #262626;
+  --background: #f0f7f0;
+  --foreground: #112211;
 }
 
 /* Smooth transitions for theme changes */

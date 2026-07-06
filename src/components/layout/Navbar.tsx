@@ -15,6 +15,7 @@ import {
   Globe,
   Bird,
   Mail,
+  MapPinSearch,
 } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
 
@@ -24,7 +25,9 @@ const navLinks = [
 ];
 
 // Direct nav links — visible after dropdown, not inside it
-const directLinks: typeof navLinks = [];
+const directLinks = [
+  { href: "/404", label: "Lost?", icon: MapPinSearch, external: false },
+];
 
 // Dropdown items for FYF pages that don't fit in the top bar
 const siteLinks = [
@@ -195,9 +198,6 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Theme Toggle */}
-            <ThemeToggle />
-
             {/* GitHub */}
             <a
               href="https://github.com/drasticstatic/findyourfeathers-public-preview"
@@ -208,6 +208,9 @@ export default function Navbar() {
               <Code className="h-3.5 w-3.5" />
               GitHub
             </a>
+
+            {/* Theme Toggle — after GitHub to match user preference */}
+            <ThemeToggle />
           </div>
 
           {/* Hamburger */}

@@ -19,13 +19,13 @@ export default function Home() {
   const siteBasePath = isDev ? "" : "/findyourfeathers-public-preview";
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-center min-h-screen bg-zinc-50 font-sans dark:bg-black relative overflow-hidden">
+    <div className="flex flex-col flex-1 items-center justify-center min-h-screen bg-[var(--background)] font-sans text-[var(--foreground)] relative overflow-hidden">
       {/* Favicon watermark */}
       <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0" aria-hidden>
         <motion.img
           src={`${siteBasePath}/favicon.svg`}
           alt=""
-          className="h-[40vh] w-[40vh] max-w-[60vw] max-h-[60vw] opacity-[0.08] dark:opacity-[0.06] select-none"
+          className="h-[40vh] w-[40vh] max-w-[60vw] max-h-[60vw] opacity-[0.06] select-none"
           animate={{ scale: [1, 1.03, 1], opacity: [0.08, 0.12, 0.08] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -41,10 +41,10 @@ export default function Home() {
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             aria-hidden
           />
-          <h1 className="text-4xl font-bold tracking-tight text-black dark:text-zinc-50">
+          <h1 className="text-4xl font-bold tracking-tight">
             Find Your Feathers
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+          <p className="max-w-md text-lg leading-8 text-[var(--muted)]">
             Discover Your Wings. A sacred space for healing, transformation,
             and the journey home to yourself.
           </p>

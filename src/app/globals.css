@@ -38,9 +38,9 @@ html.dark {
 
 /* Light green mode */
 html:not(.dark) {
-  --background: #e8f3ea;
+  --background: #d6edd9;
   --foreground: #112414;
-  --muted: #5a7a5a;
+  --muted: #4a6a4e;
 }
 
 /* Full-page green gradient feel — fixes the "white-ish light mode" the flat
@@ -56,11 +56,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Light: soft green gradient with a gentle top highlight */
+/* Light: a genuinely-green soft gradient. Previous values (#e3efe6 ..
+   #f0f7f1) were so close to white the page read white, not green. These
+   mint tones keep it soft but unmistakably light-green. */
 html:not(.dark) body {
   background-image:
-    radial-gradient(1100px 520px at 50% -8%, rgba(255, 255, 255, 0.55), transparent 60%),
-    linear-gradient(180deg, #e3efe6 0%, #f0f7f1 55%, #e8f3ea 100%);
+    radial-gradient(1100px 520px at 50% -8%, rgba(255, 255, 255, 0.45), transparent 60%),
+    linear-gradient(180deg, #c8e6cc 0%, #d6edd9 50%, #e0f1e3 100%);
 }
 
 /* Dark: deep green gradient with a subtle emerald glow at the top,

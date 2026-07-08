@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+/* Tailwind v4's `dark:` variant defaults to @media (prefers-color-scheme),
+   which keys off the OS — NOT the `.dark` class our ThemeProvider toggles.
+   That mismatch was why navbar/footer/hamburger stayed dark (or greyed) in
+   light mode: the body (my custom html.dark CSS) obeyed the toggle, but
+   every `dark:` utility obeyed the OS. Repoint `dark:` to the `.dark` class
+   so the whole chrome follows the toggle. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

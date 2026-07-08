@@ -41,7 +41,7 @@ export default function ScrollProgress() {
       }}
       transition={{ duration: 0.3 }}
       onClick={scrollToTop}
-      className="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-emerald-100 dark:bg-neutral-900 border border-emerald-200 dark:border-emerald-800/40 shadow-lg hover:shadow-xl transition-shadow group"
+      className="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-emerald-100/80 backdrop-blur-md dark:bg-neutral-900 border border-emerald-200 dark:border-emerald-800/40 shadow-lg hover:shadow-xl transition-shadow group"
       aria-label="Scroll to top"
       title={`${Math.round(progress * 100)}% scrolled`}
     >

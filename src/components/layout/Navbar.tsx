@@ -78,8 +78,8 @@ export default function Navbar() {
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-emerald-200/80 backdrop-blur-md dark:bg-neutral-950 shadow-sm border-b border-emerald-300 dark:border-emerald-800/40"
-            : "bg-emerald-200/80 backdrop-blur-md dark:bg-neutral-950/85 border-b border-transparent"
+            ? "bg-emerald-200 dark:bg-neutral-950 shadow-sm border-b border-emerald-300 dark:border-emerald-800/40"
+            : "bg-emerald-200 dark:bg-neutral-950/85 border-b border-emerald-200/60 dark:border-transparent"
         }`}
       >
         <nav className="mx-auto flex items-center justify-between px-6 h-16 max-w-6xl">
@@ -160,6 +160,7 @@ export default function Navbar() {
 
               {siteMenuOpen && (
                 <div className="absolute right-0 top-full mt-1 w-56 rounded-xl border border-emerald-300 dark:border-emerald-800/40 bg-emerald-200/90 backdrop-blur-md dark:bg-neutral-900 shadow-xl py-1 z-50">
+
                   {siteLinks.map((link) =>
                     link.external ? (
                       <a
@@ -232,11 +233,11 @@ export default function Navbar() {
       >
         <div className="absolute inset-0 bg-neutral-950/80" onClick={() => setMenuOpen(false)} />
         <div
-          className={`absolute top-0 right-0 h-full w-72 bg-emerald-200/90 backdrop-blur-md dark:bg-neutral-950 shadow-2xl flex flex-col transition-transform duration-300 ${
+          className={`absolute top-0 right-0 h-full w-72 bg-emerald-200 dark:bg-neutral-950 shadow-2xl flex flex-col transition-transform duration-300 ${
             menuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div className="flex items-center justify-between px-6 h-16 border-b border-emerald-300 dark:border-emerald-800/40 flex-shrink-0 bg-emerald-300/60 dark:bg-neutral-900/60">
+          <div className="flex items-center justify-between px-6 h-16 border-b border-emerald-300 dark:border-emerald-800/40 flex-shrink-0 bg-emerald-300 dark:bg-neutral-900/60">
             <span className="text-xs font-medium text-neutral-400 dark:text-neutral-600 uppercase tracking-wider">
               Navigation
             </span>

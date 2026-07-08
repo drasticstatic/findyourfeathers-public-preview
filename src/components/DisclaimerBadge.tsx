@@ -63,7 +63,7 @@ export default function DisclaimerBadge() {
   return (
     <>
       {/* ── Persistent banner — fixed below navbar ── */}
-      <div data-disclaimer-badge className="fixed top-16 inset-x-0 z-40 bg-emerald-200/85 backdrop-blur-md dark:bg-emerald-950/80 border-b border-emerald-300 dark:border-emerald-800/40">
+      <div data-disclaimer-badge className="fixed top-16 inset-x-0 z-40 bg-emerald-200 dark:bg-emerald-950/80 border-b border-emerald-300 dark:border-emerald-800/40">
         <button
           onClick={() => setOpen(true)}
           className="w-full px-4 py-1.5 flex items-center justify-center gap-2 text-xs font-medium text-emerald-800 dark:text-emerald-300 hover:bg-emerald-500/15 dark:hover:bg-emerald-500/20 transition-colors"

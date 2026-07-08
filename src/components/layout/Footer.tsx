@@ -19,7 +19,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-t border-emerald-300 dark:border-emerald-800/40 bg-emerald-200/80 backdrop-blur-md dark:bg-neutral-950">
+    <footer className="border-t border-emerald-300 dark:border-emerald-800/40 bg-emerald-200 dark:bg-neutral-950">
       {/* CTA Section */}
       <section className="px-6 py-20 text-center">
         <p className="text-xl font-medium text-neutral-900 dark:text-neutral-100">

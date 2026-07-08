@@ -54,17 +54,17 @@ export default function Home() {
             <div className="flex flex-col items-center mb-1">
               <Construction className="h-8 w-8 text-emerald-500" />
             </div>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400">
+            <p className="text-sm text-[var(--muted)]">
               This site is under construction.
             </p>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400">
+            <p className="text-sm text-[var(--muted)]">
               Explore the map below
             </p>
             <motion.div
               animate={{ y: [0, 6, 0] }}
               transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             >
-              <ChevronDown className="h-6 w-6 text-emerald-500 dark:text-emerald-400" />
+              <ChevronDown className="h-6 w-6 text-emerald-500" />
             </motion.div>
           </div>
 

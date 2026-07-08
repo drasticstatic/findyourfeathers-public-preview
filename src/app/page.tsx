@@ -19,7 +19,7 @@ export default function Home() {
   const siteBasePath = isDev ? "" : "/findyourfeathers-public-preview";
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-center min-h-screen bg-[var(--background)] font-sans text-[var(--foreground)] relative overflow-hidden">
+    <div className="flex flex-col flex-1 items-center justify-center min-h-screen bg-transparent font-sans text-[var(--foreground)] relative overflow-hidden">
       {/* Favicon watermark */}
       <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0" aria-hidden>
         <motion.img

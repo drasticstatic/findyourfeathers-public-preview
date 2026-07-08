@@ -102,7 +102,7 @@ export default function DisclaimerBadge() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 12 }}
               transition={{ duration: 0.25, ease: "easeOut" as const }}
-              className="relative z-10 w-full max-w-lg rounded-2xl bg-neutral-50 dark:bg-neutral-900 border border-emerald-200/60 dark:border-emerald-800/40 shadow-2xl flex flex-col max-h-[80vh]"
+              className="relative z-10 w-full max-w-lg rounded-2xl bg-emerald-50 dark:bg-neutral-900 border border-emerald-200/70 dark:border-emerald-800/40 shadow-2xl flex flex-col max-h-[80vh]"
             >
               {/* Header — fixed */}
               <div className="flex flex-col items-center p-6 sm:p-8 pb-3 flex-shrink-0">

@@ -19,7 +19,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-t border-emerald-200/40 dark:border-emerald-800/30 bg-neutral-50 dark:bg-neutral-950">
+    <footer className="border-t border-emerald-200/70 dark:border-emerald-800/40 bg-emerald-50 dark:bg-neutral-950">
       {/* CTA Section */}
       <section className="px-6 py-20 text-center">
         <p className="text-xl font-medium text-neutral-900 dark:text-neutral-100">
@@ -52,7 +52,7 @@ export default function Footer() {
       </section>
 
       {/* Bottom bar */}
-      <div className="border-t border-neutral-100 dark:border-neutral-800 px-6 py-8">
+      <div className="border-t border-emerald-200/60 dark:border-emerald-800/30 px-6 py-8">
         <div className="mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400 dark:text-neutral-600">
           <p className="inline-flex items-center gap-1">
             &copy; {new Date().getFullYear()} <Feather className="h-3 w-3 text-emerald-500" /> Find Your Feathers

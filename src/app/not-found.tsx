@@ -20,7 +20,7 @@ export default function NotFound() {
   const siteBasePath = isDev ? "" : "/findyourfeathers-public-preview";
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-6 text-center bg-gradient-to-b from-emerald-100 via-emerald-50 to-neutral-50 dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-800">
+    <div className="flex flex-col items-center justify-center min-h-screen px-6 text-center bg-transparent">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}

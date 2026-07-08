@@ -38,15 +38,35 @@ html.dark {
 
 /* Light green mode */
 html:not(.dark) {
-  --background: #f0f7f1;
+  --background: #e8f3ea;
   --foreground: #112414;
   --muted: #5a7a5a;
 }
 
-/* Smooth transitions for theme changes */
+/* Full-page green gradient feel — fixes the "white-ish light mode" the flat
+   --background color caused. Solid --background stays as a fallback for any
+   utility that needs a solid (bg-background, page.tsx). The body paints a
+   fixed gradient behind every page (home + 404 share it), so the whole site
+   reads as light green in light mode and dark green in dark mode. */
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
+  background-attachment: fixed;
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Light: soft green gradient with a gentle top highlight */
+html:not(.dark) body {
+  background-image:
+    radial-gradient(1100px 520px at 50% -8%, rgba(255, 255, 255, 0.55), transparent 60%),
+    linear-gradient(180deg, #e3efe6 0%, #f0f7f1 55%, #e8f3ea 100%);
+}
+
+/* Dark: deep green gradient with a subtle emerald glow at the top,
+   distinguishable from the footer which sits a shade darker. */
+html.dark body {
+  background-image:
+    radial-gradient(1100px 520px at 50% -8%, rgba(45, 74, 53, 0.45), transparent 60%),
+    linear-gradient(180deg, #0a1810 0%, #0e1f13 55%, #0a1810 100%);
 }

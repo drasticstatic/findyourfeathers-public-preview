@@ -78,8 +78,8 @@ export default function Navbar() {
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-white/95 dark:bg-neutral-950/95 backdrop-blur-xl shadow-sm border-b border-neutral-200/50 dark:border-neutral-800/50"
-            : "bg-white/80 dark:bg-neutral-950/80 backdrop-blur-lg"
+            ? "bg-neutral-50 dark:bg-neutral-950 backdrop-blur-xl shadow-sm border-b border-emerald-200/60 dark:border-emerald-800/40"
+            : "bg-neutral-50/85 dark:bg-neutral-950/85 backdrop-blur-lg"
         }`}
       >
         <nav className="mx-auto flex items-center justify-between px-6 h-16 max-w-6xl">
@@ -159,7 +159,7 @@ export default function Navbar() {
               </button>
 
               {siteMenuOpen && (
-                <div className="absolute right-0 top-full mt-1 w-56 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-xl py-1 z-50">
+                <div className="absolute right-0 top-full mt-1 w-56 rounded-xl border border-emerald-200/60 dark:border-emerald-800/40 bg-neutral-50 dark:bg-neutral-900 shadow-xl py-1 z-50">
                   {siteLinks.map((link) =>
                     link.external ? (
                       <a
@@ -230,9 +230,9 @@ export default function Navbar() {
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className="absolute inset-0 bg-neutral-900/80" onClick={() => setMenuOpen(false)} />
+        <div className="absolute inset-0 bg-neutral-950/80" onClick={() => setMenuOpen(false)} />
         <div
-          className={`absolute top-0 right-0 h-full w-72 bg-white dark:bg-neutral-950 shadow-2xl flex flex-col transition-transform duration-300 ${
+          className={`absolute top-0 right-0 h-full w-72 bg-neutral-50 dark:bg-neutral-950 shadow-2xl flex flex-col transition-transform duration-300 ${
             menuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >

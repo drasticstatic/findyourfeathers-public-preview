@@ -7,17 +7,39 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* ── Green-tinted neutral + base palette ──
+   Overrides Tailwind v4 defaults so every `dark:bg-neutral-950`,
+   `bg-neutral-50`, `bg-white`, etc. becomes green-tinted, giving
+   the site a cohesive dark-green / light-green feel while keeping
+   emerald accents vibrant. Standard dark:text-neutral-* and text-neutral-*
+   utilities also resolve to readable green-tinted tones on both modes. */
+@theme {
+  --color-black:     #060d07;  /* very dark green-black */
+  --color-neutral-950: #0a1810;
+  --color-neutral-900: #0e1f13;
+  --color-neutral-800: #15291b;
+  --color-neutral-700: #1d3525;
+  --color-neutral-600: #2d4a35;
+  --color-neutral-500: #4a6452;
+  --color-neutral-400: #7a9580;
+  --color-neutral-300: #a8c2af;
+  --color-neutral-200: #c9d9cd;
+  --color-neutral-100: #e3efe6;
+  --color-neutral-50:  #f0f7f1;
+  --color-white:     #f7fcf7;  /* very pale green-white */
+}
+
 /* Dark green mode (default) */
 html.dark {
-  --background: #0a180a;
+  --background: #0a1810;
   --foreground: #d4e8d4;
   --muted: #8baa8b;
 }
 
 /* Light green mode */
 html:not(.dark) {
-  --background: #f0f7f0;
-  --foreground: #112211;
+  --background: #f0f7f1;
+  --foreground: #112414;
   --muted: #5a7a5a;
 }
 

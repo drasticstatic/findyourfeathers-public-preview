@@ -20,7 +20,7 @@ export default function NotFound() {
   const siteBasePath = isDev ? "" : "/findyourfeathers-public-preview";
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-6 text-center bg-gradient-to-b from-emerald-50 via-white to-white dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-900">
+    <div className="flex flex-col items-center justify-center min-h-screen px-6 text-center bg-gradient-to-b from-emerald-100 via-emerald-50 to-neutral-50 dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-800">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
@@ -29,7 +29,7 @@ export default function NotFound() {
       >
         {/* 404 number with favicon watermark */}
         <div className="relative">
-          <span className="text-[8rem] sm:text-[12rem] font-bold leading-none text-emerald-100 dark:text-neutral-800 select-none">
+          <span className="text-[8rem] sm:text-[12rem] font-bold leading-none text-emerald-200/70 dark:text-neutral-800 select-none">
             404
           </span>
           <div className="absolute inset-0 flex items-center justify-center">

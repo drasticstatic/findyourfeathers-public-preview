@@ -41,7 +41,7 @@ export default function PageScrollProgress() {
 
   return (
     <div
-      className="fixed inset-x-0 z-30 h-0.5 bg-neutral-100 dark:bg-neutral-900"
+      className="fixed inset-x-0 z-30 h-0.5 bg-emerald-100/60 dark:bg-neutral-900"
       style={{ top: `${top}px` }}
     >
       <div

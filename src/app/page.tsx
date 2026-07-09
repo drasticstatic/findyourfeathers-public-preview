@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { ChevronDown, MapPinSearch, Construction } from "lucide-react";
+import { ChevronDown, MapPinSearch, Construction, BookOpen } from "lucide-react";
 
 function useMountCheck() {
   const [mounted, setMounted] = useState(false);
@@ -48,6 +49,16 @@ export default function Home() {
             Discover Your Wings. A sacred space for healing, transformation,
             and the journey home to yourself.
           </p>
+
+          {/* FAQ CTA — alive now (Heather's real Reiki FAQ). Sits above the
+              construction notice so visitors have a clear way to engage. */}
+          <Link
+            href="/faq"
+            className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-emerald-600/25 transition-all hover:bg-emerald-700 hover:-translate-y-0.5 hover:shadow-emerald-600/40"
+          >
+            <BookOpen className="h-4 w-4" />
+            Read the FAQ
+          </Link>
 
           {/* Scroll indicator */}
           <div className="flex flex-col items-center gap-2 mt-4">

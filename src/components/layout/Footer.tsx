@@ -52,7 +52,7 @@ export default function Footer() {
       </section>
 
       {/* Bottom bar */}
-      <div className="border-t border-emerald-200/70 dark:border-emerald-800/30 px-6 py-8">
+      <div className="border-t border-emerald-400/50 dark:border-emerald-800/30 px-6 py-8">
         <div className="mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400 dark:text-neutral-600">
           <p className="inline-flex items-center gap-1">
             &copy; {new Date().getFullYear()} <Feather className="h-3 w-3 text-emerald-500" /> Find Your Feathers

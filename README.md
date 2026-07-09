@@ -49,9 +49,9 @@ Build a robust back-end context engine and interactive FAQ/knowledge-base interf
 - TypeScript throughout — typed content data
 - GitHub Pages deployment via public preview repo
 - Private → public sync via GitExporter denylist pipeline
-- Dark mode support across all pages
-- Rainbow color theme (distinct from gold-themed iamoneself)
-- Gold scroll progress bar, mobile hamburger menu
+- Dark-green + light-green mode toggle across all pages (localStorage-persisted, ThemeToggle in navbar)
+- Emerald green theme system (distinct from gold-themed iamoneself)
+- Emerald scroll progress bar, mobile hamburger menu
 
 ---
 
@@ -116,6 +116,29 @@ npm run dev
 npm run build
 # Produces static site in /out
 ```
+
+---
+
+## 🎨 Theme System (dark-green + light-green toggle)
+
+FYF renders a true dark-green mode (default) and a soft light-green mode, both
+affecting the *whole* site — body gradient, navbar, footer, hamburger, dropdown,
+and disclaimer badge. The toggle is `ThemeToggle`-driven (`.dark` class on
+`<html>`, persisted in `localStorage`) in the navbar.
+
+- **Body** — fixed mint gradient (`html.dark` deep-green / `html:not(.dark)`
+  light mint), not a flat fill, so the whole page reads as green in both modes.
+- **Chrome** — solid `bg-emerald-200` (light) / `bg-neutral-950` (dark) on navbar,
+  footer, and hamburger. No translucency or blur on persistent chrome so nothing
+  desaturates on scroll; the frost (`backdrop-blur`) lives on the dropdown + modal
+  where it overlays a darkened backdrop.
+- **Disclaimer badge** — light `bg-emerald-300` (one step deeper than the navbar's
+  `emerald-200`) so it stays visibly distinct from the navbar; dark `bg-emerald-950/80`.
+- **Tailwind v4 + class-toggle** — Tailwind v4's `dark:` variant defaults to
+  `@media (prefers-color-scheme: dark)` (the OS), *not* the `.dark` class the
+  toggle sets. Without the override the body obeys the toggle but every `dark:*`
+  chrome utility follows the OS. `globals.css` repoints it:
+  `@custom-variant dark (&:where(.dark, .dark *));`
 
 ---
 

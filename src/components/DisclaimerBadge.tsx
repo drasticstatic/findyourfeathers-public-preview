@@ -63,7 +63,7 @@ export default function DisclaimerBadge() {
   return (
     <>
       {/* ── Persistent banner — fixed below navbar ── */}
-      <div data-disclaimer-badge className="fixed top-16 inset-x-0 z-40 bg-emerald-200 dark:bg-emerald-950/80 border-b border-emerald-300 dark:border-emerald-800/40">
+      <div data-disclaimer-badge className="fixed top-16 inset-x-0 z-40 bg-emerald-300 dark:bg-emerald-950/80 border-b border-emerald-400/60 dark:border-emerald-800/40">
         <button
           onClick={() => setOpen(true)}
           className="w-full px-4 py-1.5 flex items-center justify-center gap-2 text-xs font-medium text-emerald-800 dark:text-emerald-300 hover:bg-emerald-500/15 dark:hover:bg-emerald-500/20 transition-colors"
@@ -181,19 +181,19 @@ export default function DisclaimerBadge() {
                     <ul className="mt-2 space-y-1.5 ml-4 list-disc text-neutral-500 dark:text-neutral-500">
                       <li>
                         How an AI agent could guide visitors through FAQ
-                        questions and retreat information
+                        questions and service information
                       </li>
                       <li>
-                        A concept for streamlined registration through
-                        platforms like Retreat Guru and Aya Advisors
+                        A concept for streamlined registration for the
+                        practice&rsquo;s Reiki and metaphysical services
                       </li>
                       <li>
-                        How collected data could flow to a nonprofit Google
-                        Workspace for the foundation team
+                        How collected data could flow to the site steward&rsquo;s
+                        tools for coordinated management
                       </li>
                       <li>
-                        Open-source patterns that other retreat centers and
-                        nonprofits could adapt
+                        Open-source patterns that other small healing
+                        practices and practitioners could adapt
                       </li>
                     </ul>
                   </div>
@@ -204,21 +204,25 @@ export default function DisclaimerBadge() {
                       Development & Stewardship
                     </p>
                     <p>
-                      This portal is currently stewarded independently by a
-                      single developer, minister, and ACIM teacher, and
-                      reflects a personal synthesis of technical research,
+                      This portal is stewarded independently by a single
+                      developer as a technical workspace serving Heather&rsquo;s
+                      practice — a personal synthesis of technical research,
                       spiritual study, and community service. All content and
                       implementations should be understood in that context.
                     </p>
                     <p className="mt-2">
-                      The webmaster is not anonymous in the sense that people
-                      cannot find or make contact — but the true Author of
-                      this work is the Higher Power, the Holy Spirit, the Voice
-                      for God. As A Course in Miracles teaches:{" "}
-                      <em className="text-neutral-500 dark:text-neutral-500">
-                        &ldquo;I am not a body. I am free. For I am still as
-                        God created me.&rdquo;
-                      </em>
+                      The webmaster is reachable through the contact links on
+                      this site; it is not operated anonymously. The official
+                      practice is{" "}
+                      <a
+                        href="https://www.findyourfeathers.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-emerald-600 dark:text-emerald-400 underline underline-offset-2 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors"
+                      >
+                        findyourfeathers.org
+                      </a>
+                      .
                     </p>
                   </div>
 
@@ -261,7 +265,7 @@ export default function DisclaimerBadge() {
                   </div>
 
                   <p className="text-xs text-neutral-400 dark:text-neutral-600 italic text-center pt-2">
-                    &ldquo;Into the hands of the gift the gift is given.&rdquo;
+                    Find your feathers. Discover your wings.
                   </p>
                 </div>
               </div>

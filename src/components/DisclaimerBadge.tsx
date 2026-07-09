@@ -211,9 +211,17 @@ export default function DisclaimerBadge() {
                       implementations should be understood in that context.
                     </p>
                     <p className="mt-2">
-                      The webmaster is reachable through the contact links on
-                      this site; it is not operated anonymously. The official
-                      practice is{" "}
+                      The webmaster is reachable through the{" "}
+                      <a
+                        href="https://github.com/drasticstatic/findyourfeathers-public-preview"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-emerald-600 dark:text-emerald-400 underline underline-offset-2 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors"
+                      >
+                        GitHub source repository
+                      </a>
+                      ; this prototype is not operated anonymously. The
+                      official practice is{" "}
                       <a
                         href="https://www.findyourfeathers.org"
                         target="_blank"

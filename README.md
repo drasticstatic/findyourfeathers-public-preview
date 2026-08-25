@@ -144,4 +144,6 @@ and disclaimer badge. The toggle is `ThemeToggle`-driven (`.dark` class on
 
 ## 📜 License
 
-Private repository. All rights reserved.
+This repository is the private development source — not licensed for
+reuse. Its [public preview](https://github.com/drasticstatic/findyourfeathers-public-preview)
+is available under the [MIT License](https://github.com/drasticstatic/findyourfeathers-public-preview/blob/main/LICENSE).

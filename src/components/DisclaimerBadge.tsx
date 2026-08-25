@@ -272,6 +272,47 @@ export default function DisclaimerBadge() {
                     </ul>
                   </div>
 
+                  {/* GitHub Pages Compliance — the actual policy language + reasoning,
+                      both for anyone reviewing the site and as a teaching moment for
+                      visitors curious why it's built this way. */}
+                  <div className="rounded-lg bg-emerald-50/60 dark:bg-emerald-950/15 border border-emerald-200 dark:border-emerald-900/50 p-3">
+                    <p className="text-xs uppercase tracking-wider font-semibold text-emerald-600 dark:text-emerald-400 mb-2">
+                      GitHub Pages Compliance
+                    </p>
+                    <p>
+                      GitHub Pages&rsquo; Acceptable Use Policy states it
+                      &ldquo;is not intended for or allowed to be used as a
+                      free web hosting service to run your online business,
+                      e-commerce site, or any other website that is primarily
+                      directed at either facilitating commercial transactions
+                      or providing commercial software as a service (SaaS)&rdquo;
+                      — while explicitly permitting &ldquo;donation buttons
+                      and crowdfunding links.&rdquo;
+                    </p>
+                    <p className="mt-2">
+                      This site is built as a{" "}
+                      <strong className="text-neutral-900 dark:text-neutral-100">
+                        dev portal
+                      </strong>{" "}
+                      — a technology showcase and context engine, not a
+                      transaction site. No booking, payment, or checkout ever
+                      happens here: Heather&rsquo;s services are booked and
+                      paid for on her official Wix site,{" "}
+                      <a
+                        href="https://www.findyourfeathers.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-emerald-600 dark:text-emerald-400 underline underline-offset-2 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors"
+                      >
+                        findyourfeathers.org
+                      </a>
+                      , never here. That&rsquo;s a deliberate design choice,
+                      not an accident — it keeps this prototype squarely
+                      compliant while still giving the practice a real, useful
+                      home online.
+                    </p>
+                  </div>
+
                   <p className="text-xs text-neutral-400 dark:text-neutral-600 italic text-center pt-2">
                     Find your feathers. Discover your wings.
                   </p>

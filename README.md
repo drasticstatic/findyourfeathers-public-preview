@@ -1,9 +1,24 @@
+<!-- readme-standard: 2026-11-02 -->
+<div align="center">
+
+<img src="public/assets/banner.svg" width="100%" alt="Find Your Feathers: soft green waves rise in rhythm, a quiet practice on the journey home to yourself.">
+
 # Find Your Feathers 🪶
 
-> *Discover Your Wings. A sacred space for healing, transformation, and the journey home to yourself.*
+*Discover Your Wings. A sacred space for healing, transformation, and the journey home to yourself.*
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey?style=flat)](LICENSE)
 [![Public Preview](https://img.shields.io/badge/%F0%9F%8C%90%20Public%20Preview-Available-brightgreen)](https://drasticstatic.github.io/findyourfeathers-public-preview/) [![Synced via GitHub Actions](https://img.shields.io/badge/Synced%20via-GitHub%20Actions-blue)](https://github.com/open-condo-software/gitexporter) [![Built with Claude Code](https://img.shields.io/badge/Built%20with-Claude%20Code%20CLI-blueviolet)](https://code.claude.com/docs/en/overview) [![Status](https://img.shields.io/badge/Status-%F0%9F%94%A5%20Active%20Build-orange)](https://github.com/drasticstatic/findyourfeathers)
+
+<img src="public/assets/icons/map-pin.svg" width="16" height="16" alt=""> **You are here:** drasticstatic lab › source `findyourfeathers` (private) → twin `findyourfeathers-public-preview` (public) · `main` is the working branch
+
+</div>
+
+## <img src="public/assets/icons/compass.svg" width="24" height="24" alt=""> TL;DR
+
+1. <img src="public/assets/icons/sprout.svg" width="16" height="16" alt=""> **What this is.** A dev portal for findyourfeathers.org: an interactive FAQ and knowledge base in accordance with its healing and transformation services.
+2. <img src="public/assets/icons/users-round.svg" width="16" height="16" alt=""> **Who it is for.** People exploring those services, and whoever manages the Wix site, by hand or with an AI helper.
+3. <img src="public/assets/icons/footprints.svg" width="16" height="16" alt=""> **Do this first.** `npm install`, then `npm run dev`, or [visit the live site](https://www.findyourfeathers.org).
 
 ---
 
@@ -147,3 +162,9 @@ and disclaimer badge. The toggle is `ThemeToggle`-driven (`.dark` class on
 This repository is the private development source — not licensed for
 reuse. Its [public preview](https://github.com/drasticstatic/findyourfeathers-public-preview)
 is available under the [MIT License](https://github.com/drasticstatic/findyourfeathers-public-preview/blob/main/LICENSE).
+
+## <img src="public/assets/icons/git-pull-request.svg" width="24" height="24" alt=""> Suggest a change
+
+Noticed something? Open an [issue](../../issues) or a pull request against `main`; Christopher reads them and a person with the role merges. Not on GitHub? Reach him through any channel on [his profile](https://github.com/drasticstatic). On the public preview, please open an issue rather than a pull request: its files are synced from the private source, so a change made only there would be overwritten.
+
+<sub>The front door follows the living [README standard](https://github.com/drasticstatic/my-template/blob/main/README-STANDARD.md). Copy it, improve it.</sub>
